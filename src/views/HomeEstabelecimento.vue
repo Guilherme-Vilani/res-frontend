@@ -117,7 +117,7 @@ export default {
 
       axios
         .post(
-          "http://localhost:3001/estabelecimento/registro",
+          "https://foodsguibackend.herokuapp.com/estabelecimento/registro",
           this.dadosEstabelecimento
         )
         .then((response) => {
@@ -135,7 +135,7 @@ export default {
     excluiEstabelecimento() {
       axios
         .delete(
-          `http://localhost:3001/estabelecimento/excluir/${localStorage.id}`
+          `https://foodsguibackend.herokuapp.com/estabelecimento/excluir/${localStorage.id}`
         )
         .then((response) => {
           console.log(response.status);
@@ -146,7 +146,7 @@ export default {
 
       axios
         .post(
-          "http://localhost:3001/estabelecimento/login",
+          "https://foodsguibackend.herokuapp.com/estabelecimento/login",
           this.dadosEstabelecimento
         )
         .then((response) => {
@@ -164,7 +164,7 @@ export default {
   name: "Home Estabelecimento",
   mounted() {
     axios
-      .get(`http://localhost:3001/estabelecimento/listar/${localStorage.id}`)
+      .get(`https://foodsguibackend.herokuapp.com/estabelecimento/listar/${localStorage.id}`)
       .then((response) => {
         console.log(response.data);
         this.dadosEstabelecimento = response.data;

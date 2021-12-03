@@ -61,7 +61,7 @@ export default {
     cadastrarCliente() {
       console.log(this.cliente);
       axios
-        .post("http://localhost:3001/cliente/registro", this.cliente)
+        .post("https://foodsguibackend.herokuapp.com/cliente/registro", this.cliente)
         .then(() => {
           this.$router.push("/home");
         })

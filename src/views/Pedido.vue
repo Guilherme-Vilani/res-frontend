@@ -36,7 +36,7 @@ export default {
   props: {},
   mounted() {
     axios
-      .get(`http://localhost:3001/pedido/listar/${localStorage.id}`)
+      .get(`https://foodsguibackend.herokuapp.com/pedido/listar/${localStorage.id}`)
       .then((response) => {
         this.lstPedido = response.data
         console.log(response);

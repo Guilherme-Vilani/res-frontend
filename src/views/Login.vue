@@ -65,7 +65,7 @@ export default {
   methods: {
     redirectHome() {
       axios
-        .post("http://localhost:3001/cliente/login", this.login)
+        .post("https://foodsguibackend.herokuapp.com/cliente/login", this.login)
         .then((response) => {
           this.id = response.data._id;
           localStorage.id = this.id;

@@ -63,7 +63,7 @@ export default {
   methods: {
     cadastrarEstabelecimento() {
       axios
-        .post("http://localhost:3001/estabelecimento/registro", this.estabelecimento)
+        .post("https://foodsguibackend.herokuapp.com/estabelecimento/registro", this.estabelecimento)
         .then(() => {
           this.$router.push("/login-estabelecimento");
         })

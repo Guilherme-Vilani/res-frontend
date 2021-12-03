@@ -118,7 +118,7 @@ export default {
     },
     salvaPedido() {
       axios
-        .post("http://localhost:3001/pedido/registro", this.pedido)
+        .post("https://foodsguibackend.herokuapp.com/pedido/registro", this.pedido)
         .then(() => {
           console.log(this.pedido);
           this.open1();
@@ -132,7 +132,7 @@ export default {
   mounted() {
     console.log(this.$router.params);
     axios
-      .get("http://localhost:3001/estabelecimento/listar")
+      .get("https://foodsguibackend.herokuapp.com/estabelecimento/listar")
       .then((response) => (this.lstEstabelecimento = response.data));
     this.lstCardapio = this.lstEstabelecimento;
   },
